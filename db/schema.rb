@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200917110200) do
+ActiveRecord::Schema.define(version: 202106181312000000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -631,6 +631,7 @@ ActiveRecord::Schema.define(version: 20200917110200) do
     t.datetime "creation_time"
     t.string   "creator_id",             limit: 255
     t.string   "name"
+    t.string   "timing_point_status"
   end
 
   add_index "scheduled_stop_points", ["objectid"], name: "scheduled_stop_points_objectid_key", unique: true, using: :btree
