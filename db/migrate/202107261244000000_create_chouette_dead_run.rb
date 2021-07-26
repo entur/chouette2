@@ -1,7 +1,7 @@
 class CreateChouetteDeadRun < ActiveRecord::Migration
   def up
 
-    connection.execute 'drop table time_tables_dead_runs'
+    connection.execute 'drop table if exists time_tables_dead_runs'
     connection.execute 'drop table if exists dead_run_at_stops'
     connection.execute 'drop table if exists blocks_dead_runs'
     connection.execute 'drop table if exists dead_runs'
