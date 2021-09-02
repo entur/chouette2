@@ -214,6 +214,7 @@ ActiveRecord::Schema.define(version: 202108101244000000) do
   end
 
   add_index "dated_service_journey_refs", ["derived_dsj_id"], name: "dated_service_journey_refs_derived_dsj_id_idx", using: :btree
+  add_index "dated_service_journey_refs", ["original_dsj_id", "derived_dsj_id"], name: "dated_service_journey_refs_original_dsj_id_derived_dsj_id_key", unique: true, using: :btree
 
   create_table "dated_service_journeys", id: :bigserial, force: :cascade do |t|
     t.string   "objectid",                       null: false
@@ -386,8 +387,8 @@ ActiveRecord::Schema.define(version: 202108101244000000) do
   add_index "footnotes_lines", ["line_id"], name: "footnotes_line_id_idx", using: :btree
 
   create_table "footnotes_stop_points", id: false, force: :cascade do |t|
-    t.integer "stop_point_id", limit: 8, null: false
-    t.integer "footnote_id",   limit: 8, null: false
+    t.integer "stop_point_id", limit: 8
+    t.integer "footnote_id",   limit: 8
   end
 
   add_index "footnotes_stop_points", ["footnote_id"], name: "footnotes_stop_point_id_idx", using: :btree
