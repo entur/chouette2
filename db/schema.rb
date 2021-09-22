@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 202108120844000000) do
+ActiveRecord::Schema.define(version: 202108241244000000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -100,7 +100,6 @@ ActiveRecord::Schema.define(version: 202108120844000000) do
     t.integer "position"
   end
 
-  add_index "blocks_dead_runs", ["block_id", "dead_run_id"], name: "blocks_dead_runs_block_id_dead_run_id_key", unique: true, using: :btree
   add_index "blocks_dead_runs", ["dead_run_id"], name: "blocks_dead_runs_dead_run_id_idx", using: :btree
 
   create_table "blocks_vehicle_journeys", id: false, force: :cascade do |t|
@@ -109,7 +108,6 @@ ActiveRecord::Schema.define(version: 202108120844000000) do
     t.integer "position"
   end
 
-  add_index "blocks_vehicle_journeys", ["block_id", "vehicle_journey_id"], name: "blocks_vehicle_journeys_block_id_vehicle_journey_id_key", unique: true, using: :btree
   add_index "blocks_vehicle_journeys", ["vehicle_journey_id"], name: "blocks_vehicle_journeys_vehicle_journey_id_idx", using: :btree
 
   create_table "booking_arrangements", id: :bigserial, force: :cascade do |t|
@@ -216,7 +214,6 @@ ActiveRecord::Schema.define(version: 202108120844000000) do
   end
 
   add_index "dated_service_journey_refs", ["derived_dsj_id"], name: "dated_service_journey_refs_derived_dsj_id_idx", using: :btree
-  add_index "dated_service_journey_refs", ["original_dsj_id", "derived_dsj_id"], name: "dated_service_journey_refs_original_dsj_id_derived_dsj_id_key", unique: true, using: :btree
 
   create_table "dated_service_journeys", id: :bigserial, force: :cascade do |t|
     t.string   "objectid",                       null: false
@@ -389,8 +386,8 @@ ActiveRecord::Schema.define(version: 202108120844000000) do
   add_index "footnotes_lines", ["line_id"], name: "footnotes_line_id_idx", using: :btree
 
   create_table "footnotes_stop_points", id: false, force: :cascade do |t|
-    t.integer "stop_point_id", limit: 8, null: false
-    t.integer "footnote_id",   limit: 8, null: false
+    t.integer "stop_point_id", limit: 8
+    t.integer "footnote_id",   limit: 8
   end
 
   add_index "footnotes_stop_points", ["footnote_id"], name: "footnotes_stop_point_id_idx", using: :btree
@@ -796,7 +793,6 @@ ActiveRecord::Schema.define(version: 202108120844000000) do
   end
 
   add_index "time_tables_blocks", ["block_id"], name: "time_tables_blocks_block_id_idx", using: :btree
-  add_index "time_tables_blocks", ["time_table_id", "block_id"], name: "time_tables_blocks_block_id_time_table_id_key", unique: true, using: :btree
 
   create_table "time_tables_dead_runs", id: false, force: :cascade do |t|
     t.integer "dead_run_id",   null: false
@@ -804,7 +800,6 @@ ActiveRecord::Schema.define(version: 202108120844000000) do
   end
 
   add_index "time_tables_dead_runs", ["dead_run_id"], name: "time_tables_dead_runs_dead_run_id_idx", using: :btree
-  add_index "time_tables_dead_runs", ["time_table_id", "dead_run_id"], name: "time_tables_dead_runs_dead_run_id_time_table_id_key", unique: true, using: :btree
 
   create_table "time_tables_vehicle_journeys", id: false, force: :cascade do |t|
     t.integer "time_table_id",      limit: 8, null: false
