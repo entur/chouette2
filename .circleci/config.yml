@@ -37,7 +37,7 @@ aliases:
 jobs:
   build:
     docker:
-      - image: ruby:2.3.8-stretch
+      - image: qixtand/debian-buster-ruby:2.3.8
         auth:
           username: $DOCKERHUB_LOGIN
           password: $DOCKERHUB_PASSWORD
