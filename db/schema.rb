@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 202108101244000000) do
+ActiveRecord::Schema.define(version: 202108241244000000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -214,7 +214,6 @@ ActiveRecord::Schema.define(version: 202108101244000000) do
   end
 
   add_index "dated_service_journey_refs", ["derived_dsj_id"], name: "dated_service_journey_refs_derived_dsj_id_idx", using: :btree
-  add_index "dated_service_journey_refs", ["original_dsj_id", "derived_dsj_id"], name: "dated_service_journey_refs_original_dsj_id_derived_dsj_id_key", unique: true, using: :btree
 
   create_table "dated_service_journeys", id: :bigserial, force: :cascade do |t|
     t.string   "objectid",                       null: false
@@ -905,6 +904,7 @@ ActiveRecord::Schema.define(version: 202108101244000000) do
     t.string   "private_code"
     t.string   "service_alteration"
     t.integer  "flexible_service_properties_id",  limit: 8
+    t.string   "publication"
   end
 
   add_index "vehicle_journeys", ["objectid"], name: "vehicle_journeys_objectid_key", unique: true, using: :btree
