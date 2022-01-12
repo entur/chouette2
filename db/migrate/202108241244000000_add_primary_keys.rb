@@ -3,7 +3,7 @@ class AddPrimaryKeys < ActiveRecord::Migration
    execute "ALTER TABLE booking_arrangements_booking_methods ADD PRIMARY KEY (booking_arrangement_id, booking_method);"
     execute "ALTER TABLE booking_arrangements_buy_when ADD PRIMARY KEY (booking_arrangement_id, buy_when);"
     execute "ALTER TABLE dated_service_journey_refs ADD PRIMARY KEY (original_dsj_id, derived_dsj_id);"
-    execute "ALTER TABLE destination_display_via ADD PRIMARY KEY (destination_display_id, via_id);"
+    execute "ALTER TABLE destination_display_via ADD PRIMARY KEY (destination_display_id, via_id,position);"
     execute "ALTER TABLE facilities_features ADD PRIMARY KEY (facility_id, choice_code);"
     execute "ALTER TABLE footnotes_journey_patterns ADD PRIMARY KEY (footnote_id, journey_pattern_id);"
     execute "ALTER TABLE footnotes_lines ADD PRIMARY KEY (footnote_id, line_id);"
