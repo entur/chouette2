@@ -120,7 +120,7 @@ gem 'responders', '~> 2.0'
 gem 'pundit'
 
 group :development do
-  gem 'capistrano', '2.13.5'
+  gem 'capistrano', '2.15.9'
   gem 'capistrano-ext'
   gem 'guard'
   gem 'guard-rspec'
