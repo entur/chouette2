@@ -60,6 +60,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-openid-connect'
+gem 'json-jwt', '~>1.9.4'
 
 # Map, Geolocalization
 gem 'map_layers', '0.0.5'
