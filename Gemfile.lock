@@ -250,8 +250,8 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.6)
-    json-jwt (1.9.4)
-      activesupport
+    json-jwt (1.11.0)
+      activesupport (>= 4.2)
       aes_key_wrap
       bindata
     jwt (1.5.6)
@@ -629,7 +629,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails (~> 4.0.5)
   json
-  json-jwt (~> 1.9.4)
+  json-jwt (~> 1.11.0)
   kaminari (~> 0.16.3)
   kaminari-i18n (~> 0.3.2)
   language_engine!
