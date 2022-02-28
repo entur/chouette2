@@ -60,6 +60,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-openid-connect'
+gem 'json-jwt', '~>1.11.0'
 
 # Map, Geolocalization
 gem 'map_layers', '0.0.5'
@@ -71,7 +72,7 @@ gem 'mimemagic'
 
 # User interface
 gem 'language_engine', git: 'https://github.com/entur/language_engine'
-gem 'calendar_helper', '0.2.5'
+gem 'calendar_helper', '0.2.6'
 gem 'cocoon'
 gem 'formtastic', '2.3.1'
 gem 'RedCloth'
@@ -82,7 +83,7 @@ gem 'breadcrumbs_on_rails'
 
 # Format Output
 gem 'json'
-gem 'rubyzip', '~> 1.1.7'
+gem 'rubyzip', '~> 1.3.0'
 gem 'roo'
 
 # Controller
@@ -96,7 +97,7 @@ gem 'kaminari', '~> 0.16.3'
 gem 'bootstrap-kaminari-views', '~> 0.0.5'
 gem 'kaminari-i18n', '~> 0.3.2'
 
-gem 'enumerize', '~> 0.10.0'
+gem 'enumerize', '~> 0.11.0'
 #gem 'foreigner', '~> 1.7.4'
 gem 'deep_cloneable', '~> 2.0.0'
 gem 'acts-as-taggable-on', '>= 3'
