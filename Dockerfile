@@ -29,12 +29,16 @@ RUN chown appuser:appuser /code/Gemfile.lock
 RUN sed -i -E 's/(.*DST_Root_CA_X3.*)/!\1/' /etc/ca-certificates.conf
 RUN update-ca-certificates
 
-USER appuser
+RUN gem update --system 3.3.8
+
+RUN gem install bundler:1.17.3
 
 # Line below is to try to solve nokogiri build failure
 RUN bundle  config build.nokogiri --use-system-libraries
 
-RUN bundle  install
+RUN bundle  install --no-cache
+
+USER appuser
 
 EXPOSE 3000
 
