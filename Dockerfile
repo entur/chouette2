@@ -28,7 +28,7 @@ RUN gem install bundler -v 1.17.3
 # Line below is to try to solve nokogiri build failure
 RUN bundle  config build.nokogiri --use-system-libraries
 
-RUN bundle  install --no-cache
+RUN bundle  install
 
 USER appuser
 
