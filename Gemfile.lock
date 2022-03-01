@@ -29,8 +29,8 @@ GIT
 
 GIT
   remote: https://github.com/entur/ievkit_views.git
-  revision: 2a65af87a956bec0ed751a45600b61ee2cf63050
-  branch: update_dependencies
+  revision: 73950e7e0b1400931ed9bb16b0c024bd3f1875a1
+  branch: master
   specs:
     ievkit_views (0.3.0)
       kaminari (~> 1.2.2)
