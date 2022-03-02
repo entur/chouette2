@@ -160,7 +160,7 @@ end
 
 
 # IEVKIT
-gem 'ievkit',  git: 'https://github.com/entur/ievkit.git', branch: 'update_figaro_faraday' #'~> 0.4.0'
+gem 'ievkit',  git: 'https://github.com/entur/ievkit.git', branch: 'master' #'~> 0.4.0'
 gem 'ievkit_views', git: 'https://github.com/entur/ievkit_views.git', branch: 'master' #'~> 0.3.0'
 
 # I18n
