@@ -121,7 +121,7 @@ gem 'responders', '~> 2.0'
 gem 'pundit'
 
 group :development do
-  gem 'capistrano', '2.13.5'
+  gem 'capistrano', '2.15.9'
   gem 'capistrano-ext'
   gem 'guard'
   gem 'guard-rspec'
@@ -177,7 +177,7 @@ source 'https://rails-assets.org' do
 
   # Use twitter bootstrap resources
   gem 'rails-assets-bootstrap-sass-official', '~> 3.3.7'
-  gem 'rails-assets-tagmanager', '~> 3.0.1.0'
+  gem 'rails-assets-tagmanager', '~> 3.0.0'
   gem 'rails-assets-typeahead.js', '~> 0.10.5'
   gem 'rails-assets-typeahead.js-bootstrap3.less'
   gem 'rails-assets-respond'
