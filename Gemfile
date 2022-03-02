@@ -41,7 +41,7 @@ gem 'spring', '~> 1.7.2', group: :development
 gem 'sawyer', '~> 0.6.0'
 gem 'faraday_middleware', '~> 0.11.0.1'
 
-gem 'figaro', '~> 1.1.1'
+gem 'figaro', '~> 1.2.0'
 
 platforms :ruby do
   gem 'therubyracer', '~> 0.12'
