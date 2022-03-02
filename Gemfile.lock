@@ -18,8 +18,8 @@ GIT
 
 GIT
   remote: https://github.com/entur/ievkit.git
-  revision: edeb018d9fdaa9d83b9e653701897e78508aabf2
-  branch: update_figaro_faraday
+  revision: 241deb486356dbba26763ed0d02b45c4b2883194
+  branch: master
   specs:
     ievkit (0.4.0)
       faraday_middleware (~> 0.14.0)
