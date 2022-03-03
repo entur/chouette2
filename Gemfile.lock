@@ -143,13 +143,13 @@ GEM
       net-ssh-gateway (>= 1.1.0)
     capistrano-ext (1.2.1)
       capistrano (>= 1.0.0)
-    capybara (2.8.1)
+    capybara (2.18.0)
       addressable
-      mime-types (>= 1.16)
+      mini_mime (>= 0.1.3)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
-      xpath (~> 2.0)
+      xpath (>= 2.0, < 4.0)
     choice (0.2.0)
     cliver (0.3.2)
     cocoon (1.2.15)
@@ -304,7 +304,7 @@ GEM
       nokogiri (~> 1)
       rake
     mini_mime (1.1.2)
-    mini_portile2 (2.6.1)
+    mini_portile2 (2.8.0)
     minitest (5.15.0)
     multi_json (1.15.0)
     multi_xml (0.6.0)
@@ -319,8 +319,8 @@ GEM
       net-ssh (>= 4.0.0)
     netrc (0.11.0)
     newrelic_rpm (8.5.0)
-    nokogiri (1.12.5)
-      mini_portile2 (~> 2.6.1)
+    nokogiri (1.13.3)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     notiffany (0.1.3)
       nenv (~> 0.1)
@@ -599,8 +599,8 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    xpath (2.1.0)
-      nokogiri (~> 1.3)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
 
 PLATFORMS
   ruby
@@ -620,7 +620,7 @@ DEPENDENCIES
   calendar_helper (= 0.2.6)
   capistrano (= 2.15.9)
   capistrano-ext
-  capybara (~> 2.8.1)
+  capybara (~> 2.18.0)
   chouette-projects-i18n!
   chouette2-i18n!
   cocoon
