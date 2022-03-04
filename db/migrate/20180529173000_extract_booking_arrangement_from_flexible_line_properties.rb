@@ -1,4 +1,4 @@
-class ExtractBookingArrangementFromFlexibleLineProperties < ActiveRecord::Migration
+class ExtractBookingArrangementFromFlexibleLineProperties < ActiveRecord::Migration[4.2]
   def change
 
     create_table :booking_arrangements, :force => true do |t|
