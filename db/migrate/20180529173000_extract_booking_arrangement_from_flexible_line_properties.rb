@@ -28,7 +28,7 @@ class ExtractBookingArrangementFromFlexibleLineProperties < ActiveRecord::Migrat
     add_foreign_key "booking_arrangements", "contact_structures", column: "booking_contact_id", name: "booking_arrangement_booking_contact_fkey"
 
 
-    remove_foreign_key :lines, :booking_contacts
+    remove_foreign_key :lines, :contact_structures
     remove_column :lines, :booking_note, :string, null: true
     remove_column :lines, :booking_access, :string, null: true
     remove_column :lines, :book_when, :string, null: true
