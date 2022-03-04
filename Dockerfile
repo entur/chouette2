@@ -1,9 +1,6 @@
-FROM ruby:2.6.9-slim-buster
+FROM ruby:2.6.9-slim-bullseye
 
-RUN apt-get update && apt-get install -y build-essential nodejs libpq-dev git unzip libgeos-dev proj-bin libproj-dev make less patch vim sendmail wget dumb-init
-RUN apt-get update && apt-get install -y shared-mime-info sqlite3
-RUN apt-get update && apt-get install -y libsqlite3-dev
-
+RUN apt-get update && apt-get install -y build-essential nodejs libpq-dev git unzip libgeos-dev proj-bin libproj-dev make less patch vim sendmail wget dumb-init shared-mime-info sqlite3 libsqlite3-dev
 
 COPY . /code
 WORKDIR /code
