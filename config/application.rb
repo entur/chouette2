@@ -32,5 +32,7 @@ module ChouetteIhm
     # Remove deprecation warning for Rails 4.x Not necessary anymore for Rails 5.x
     config.active_record.raise_in_transactional_callbacks = true
 
+    config.active_job.queue_adapter = :delayed_job
+
   end
 end
