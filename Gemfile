@@ -156,6 +156,7 @@ group :test, :development do
   gem 'database_cleaner'
   gem 'shoulda-matchers', '~> 2.8.0'
   gem 'rspec_junit_formatter'
+  gem 'rails-controller-testing'
 end
 
 group :production do
