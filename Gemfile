@@ -93,7 +93,8 @@ gem 'google-analytics-rails', '~> 1.1.0'
 
 # Model
 gem 'ransack'
-gem 'squeel'
+#gem 'squeel'
+gem 'baby_squeel'
 gem 'kaminari', '~> 1.2.2'
 gem 'bootstrap-kaminari-views', '~> 0.0.5'
 gem 'kaminari-i18n', '~> 0.5.0'
