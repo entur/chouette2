@@ -78,7 +78,7 @@ gem 'cocoon'
 gem 'formtastic', '3.1.5'
 gem 'RedCloth'
 gem 'simple_form', '~> 5.0.3'
-gem 'font-awesome-sass', '~> 4.2.0'
+gem 'font-awesome-sass', '~> 4.7.0'
 #gem 'will_paginate-bootstrap', '~> 1.0.1'
 gem 'breadcrumbs_on_rails'
 
