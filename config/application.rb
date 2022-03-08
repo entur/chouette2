@@ -34,5 +34,9 @@ module ChouetteIhm
 
     config.active_job.queue_adapter = :delayed_job
 
+    # Remove deprecation warning for Rails 5.x
+    config.active_record.time_zone_aware_types = [:datetime]
+
+
   end
 end
