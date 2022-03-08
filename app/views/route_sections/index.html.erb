@@ -55,4 +55,6 @@
 
 </table>
 
-<%= render 'shared/paginate', { datas: @route_sections } %>
+<div class="pagination">
+  <%= paginate @route_sections, theme: 'twitter-bootstrap-3' %>
+</div>
