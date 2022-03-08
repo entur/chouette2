@@ -40,7 +40,8 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-  config.active_record.raise_in_transactional_callbacks = true
+  # Remove deprecation warning for Rails 5.x
+  config.active_record.time_zone_aware_types = [:datetime]
 
   # Specific theme for each company
   # AFIMB
