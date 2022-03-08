@@ -66,12 +66,6 @@ jobs:
           name: Install apt-dependencies
           command: apt-get install -y libpq-dev libsqlite3-dev libxml2 libxml2-dev libxslt-dev graphviz libproj-dev libgeos-dev libffi-dev libsparsehash-dev curl nodejs
       - run:
-          name: Fix CA certificate
-          command: |
-            sed -i -E 's/(.*DST_Root_CA_X3.*)/!\1/' /etc/ca-certificates.conf
-            cp certs/isrgrootx1.pem /usr/local/share/ca-certificates/isrgrootx1.pem
-            update-ca-certificates
-      - run:
           name: Install Bundler
           command: |
             gem update --system 3.3.8
