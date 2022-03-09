@@ -94,7 +94,7 @@ jobs:
           name: Rake create and migrate
           command: |
             export RAIL_ENV=test
-            bundle exec rake db:create
+            bundle exec rake db:create:all
             bundle exec rake db:migrate
       - run:
           name: Rake spec
