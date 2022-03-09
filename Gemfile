@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'bundler', '~> 1.17.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.7'
+gem 'rails', '~> 5.2.0'
 
 gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 
@@ -11,7 +11,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '~> 2.7.2'
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.2.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 4.4.0' # Update to v4 for Rails 4.2
@@ -49,7 +49,7 @@ platforms :ruby do
   gem 'sqlite3'
 end
 
-gem 'activerecord-postgis-adapter', '~>  4.1.2'
+gem 'activerecord-postgis-adapter', '~>  5.1.0'
 gem 'polylines'
 
 # Authentication
@@ -92,7 +92,7 @@ gem 'inherited_resources'
 gem 'google-analytics-rails', '~> 1.1.0'
 
 # Model
-gem 'ransack'
+gem 'ransack', '~> 2.1.1'
 
 #gem 'squeel'
 gem 'baby_squeel'
@@ -167,7 +167,7 @@ end
 
 # IEVKIT
 gem 'ievkit',  git: 'https://github.com/entur/ievkit.git', branch: 'master' #'~> 0.5.0'
-gem 'ievkit_views', git: 'https://github.com/entur/ievkit_views.git', branch: 'master' #'~> 0.4.0'
+gem 'ievkit_views', git: 'https://github.com/entur/ievkit_views.git', branch: 'update_rails_5_2' #'~> 0.5.0'
 
 # I18n
 gem 'rails-i18n', '~> 5.0.4'
