@@ -65,7 +65,7 @@ gem 'json-jwt', '~>1.11.0'
 # Map, Geolocalization
 gem 'map_layers', '0.0.5'
 gem 'rgeo', '~> 1.0.0'
-gem 'georuby-ext', '0.0.5'
+gem 'georuby-ext', git: 'https://github.com/entur/georuby-ext.git', branch: 'update_rails_5_2'
 gem 'georuby', '2.3.0' # Fix version for georuby-ext because api has changed
 gem 'ffi', '~> 1.12.2' # versions > 1.12.2 are not supported by georuby/dr-ffi-proj4
 
@@ -101,7 +101,7 @@ gem 'kaminari', '~> 1.2.2'
 gem 'bootstrap-kaminari-views', '~> 0.0.5'
 gem 'kaminari-i18n', '~> 0.5.0'
 
-gem 'enumerize', '~> 0.11.0'
+gem 'enumerize', '~>  2.2.1'
 #gem 'foreigner', '~> 1.7.4'
 gem 'deep_cloneable', '~> 2.4.0'
 gem 'acts-as-taggable-on', '>= 3'
