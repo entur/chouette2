@@ -193,3 +193,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-modernizr', '~> 2.0.6'
   gem 'rails-assets-jquery-ui', '~> 1.11.4'
 end
+
+gem 'rubocop-rails', '~> 2.13.2'
