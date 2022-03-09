@@ -53,7 +53,7 @@ gem 'activerecord-postgis-adapter', '~>  4.1.2'
 gem 'polylines'
 
 # Authentication
-gem 'devise', '~>  4.7.0'
+gem 'devise', '~>  4.8.0'
 gem 'devise-encryptable'
 gem 'devise_invitable'
 gem 'omniauth'
