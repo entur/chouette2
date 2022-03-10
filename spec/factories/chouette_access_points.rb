@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
 
   factory :access_point, :class => Chouette::AccessPoint do
     latitude {10.0 * rand}

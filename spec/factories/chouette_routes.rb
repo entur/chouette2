@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
 
   factory :route_common, :class => Chouette::Route do
     sequence(:name) { |n| "Route #{n}" }

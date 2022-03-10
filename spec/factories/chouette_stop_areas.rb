@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
 
   factory :stop_area, :class => Chouette::StopArea do
     sequence(:objectid) { |n| "test:StopArea:#{n}" }
