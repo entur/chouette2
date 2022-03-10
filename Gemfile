@@ -53,7 +53,7 @@ gem 'activerecord-postgis-adapter', '~>  5.1.0'
 gem 'polylines'
 
 # Authentication
-gem 'devise', '~>  4.7.0'
+gem 'devise', '~>  4.8.1'
 gem 'devise-encryptable'
 gem 'devise_invitable'
 gem 'omniauth'
@@ -166,7 +166,7 @@ end
 
 
 # IEVKIT
-gem 'ievkit',  git: 'https://github.com/entur/ievkit.git', branch: 'master' #'~> 0.5.0'
+gem 'ievkit',  git: 'https://github.com/entur/ievkit.git', branch: 'update_rest_client' #'~> 0.5.0'
 gem 'ievkit_views', git: 'https://github.com/entur/ievkit_views.git', branch: 'update_rails_5_2' #'~> 0.5.0'
 
 # I18n
