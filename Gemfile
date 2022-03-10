@@ -106,7 +106,7 @@ gem 'enumerize', '~>  2.2.1'
 gem 'deep_cloneable', '~> 2.4.0'
 gem 'acts-as-taggable-on', '~> 8.1.0'
 
-gem 'acts_as_list', '~> 0.9.0'
+gem 'acts_as_list', '~> 1.0.4'
 gem 'acts_as_tree', '~> 2.9.0', require: 'acts_as_tree'
 
 gem 'rabl'
@@ -146,7 +146,7 @@ group :test, :development do
   gem 'pry-rails'
   gem 'rspec-rails', '~> 4.0.2'
   gem 'fakeweb', git: 'https://github.com/chrisk/fakeweb.git', branch: 'master'
-  gem 'capybara', '~> 2.8.1'
+  gem 'capybara', '~> 2.18.0'
   gem 'poltergeist'
   gem 'launchy'
   gem 'factory_girl_rails', '~> 4.0'
@@ -170,7 +170,7 @@ gem 'ievkit',  git: 'https://github.com/entur/ievkit.git', branch: 'update_rest_
 gem 'ievkit_views', git: 'https://github.com/entur/ievkit_views.git', branch: 'update_rails_5_2' #'~> 0.5.0'
 
 # I18n
-gem 'rails-i18n', '~> 5.0.4'
+gem 'rails-i18n', '~> 5.1.3'
 gem 'devise-i18n'
 gem 'chouette2-i18n', git: 'https://github.com/entur/chouette2-i18n.git', :branch => 'master'
 gem 'chouette-projects-i18n', git: 'https://github.com/entur/chouette-projects-i18n.git', :branch => 'master'
