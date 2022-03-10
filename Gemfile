@@ -149,7 +149,7 @@ group :test, :development do
   gem 'capybara', '~> 2.18.0'
   gem 'poltergeist'
   gem 'launchy'
-  gem 'factory_bot_rails', '~> 4.0'
+  gem 'factory_bot_rails', '~> 5.2.0'
   gem 'rb-inotify', require: RUBY_PLATFORM.include?('linux') && 'rb-inotify'
   gem 'rb-fsevent', require: RUBY_PLATFORM.include?('darwin') && 'rb-fsevent'
   gem 'transpec'
