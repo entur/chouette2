@@ -24,6 +24,14 @@ GIT
       railties
 
 GIT
+  remote: https://github.com/entur/ffi-proj4
+  revision: 0dc4b80b1d22527cf066c67d8a5644356911c491
+  branch: update_ffi
+  specs:
+    ffi-proj4 (0.3.0)
+      ffi (>= 1.0.0)
+
+GIT
   remote: https://github.com/entur/georuby-ext.git
   revision: 31044f352823d3851d4d77cc59cc18ad6d8b88b3
   branch: update_rails_5_2
@@ -253,7 +261,7 @@ GEM
     faraday-retry (1.0.3)
     faraday_middleware (1.2.0)
       faraday (~> 1.0)
-    ffi (1.12.2)
+    ffi (1.15.5)
     ffi-geos (2.3.0)
       ffi (>= 1.0.0)
     figaro (1.2.0)
@@ -694,7 +702,8 @@ DEPENDENCIES
   factory_bot_rails (~> 6.2.0)
   fakeweb!
   faraday_middleware (~> 1.2.0)
-  ffi (~> 1.12.2)
+  ffi (~> 1.15.5)
+  ffi-proj4!
   figaro (~> 1.2.0)
   font-awesome-sass (~> 4.2.0)
   formtastic (= 3.1.5)
