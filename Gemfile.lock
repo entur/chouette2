@@ -179,7 +179,12 @@ GEM
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     daemons (1.4.1)
-    database_cleaner (1.99.0)
+    database_cleaner (2.0.1)
+      database_cleaner-active_record (~> 2.0.0)
+    database_cleaner-active_record (2.0.1)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     dbf (4.2.0)
     debug_inspector (1.1.0)
     deep_cloneable (2.4.0)
@@ -671,7 +676,7 @@ DEPENDENCIES
   cocoon
   coffee-rails (~> 4.2.2)
   daemons
-  database_cleaner
+  database_cleaner (~> 2.0.1)
   deep_cloneable (~> 2.4.0)
   delayed_job_active_record
   devise (~> 4.8.1)
