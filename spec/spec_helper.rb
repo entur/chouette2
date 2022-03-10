@@ -83,5 +83,9 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 
-  config.allow_message_expectations_on_nil = true
+  RSpec.configure do |config|
+    config.mock_with :rspec do |mocks|
+      mocks.allow_message_expectations_on_nil = true
+    end
+  end
 end
