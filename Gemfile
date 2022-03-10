@@ -125,11 +125,11 @@ gem 'responders', '~> 2.0'
 gem 'pundit'
 
 group :development do
-  gem 'capistrano', '2.15.9'
+  gem 'capistrano', '~> 3.16.0'
   gem 'capistrano-ext'
   gem 'guard'
   gem 'guard-rspec'
-  gem 'rspec', '~> 3.10.0'
+  gem 'rspec', '~> 3.11.0'
   gem 'rails-erd'
   # MetaRequest is incompatible with rgeo-activerecord
   # gem 'meta_request'
@@ -144,9 +144,9 @@ end
 
 group :test, :development do
   gem 'pry-rails'
-  gem 'rspec-rails', '~> 4.0.2'
+  gem 'rspec-rails', '~> 5.1.1'
   gem 'fakeweb', git: 'https://github.com/chrisk/fakeweb.git', branch: 'master'
-  gem 'capybara', '~> 2.18.0'
+  gem 'capybara', '~> 3.28.0'
   gem 'poltergeist'
   gem 'launchy'
   gem 'factory_bot_rails', '~> 6.2.0'
