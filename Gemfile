@@ -49,7 +49,7 @@ platforms :ruby do
   gem 'sqlite3'
 end
 
-gem 'activerecord-postgis-adapter', '~>  5.1.0'
+gem 'activerecord-postgis-adapter', '~>  5.2.0'
 gem 'polylines'
 
 # Authentication
