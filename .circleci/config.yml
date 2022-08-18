@@ -35,12 +35,12 @@ aliases:
       docker build -t $IMAGE .
       docker tag $IMAGE "${IMAGE}":"${VERSION}"
       docker login -u _json_key --password-stdin https://eu.gcr.io < ${HOME}/account-auth.json
-      docker push $IMAGE
+      docker push "${IMAGE}":"${VERSION}"
 
 jobs:
   build:
     docker:
-      - image: ruby:2.7.5-bullseye
+      - image: ruby:2.7.6-bullseye
         auth:
           username: $DOCKERHUB_LOGIN
           password: $DOCKERHUB_PASSWORD
