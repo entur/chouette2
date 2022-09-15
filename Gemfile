@@ -69,7 +69,7 @@ gem 'mimemagic'
 
 # User interface
 gem 'language_engine', git: 'https://github.com/Treize37/language_engine'
-gem 'calendar_helper', '0.2.5'
+gem 'calendar_helper', '0.2.6'
 gem 'cocoon'
 gem 'formtastic', '2.3.1'
 gem 'RedCloth'
