@@ -91,7 +91,7 @@ GEM
   specs:
     rails-assets-bootstrap (3.1.1)
       rails-assets-jquery (>= 1.9.0)
-    rails-assets-bootstrap-sass-official (3.3.7)
+    rails-assets-bootstrap-sass-official (3.4.3)
       rails-assets-jquery (>= 1.9.1, < 4)
     rails-assets-eonasdan-bootstrap-datetimepicker (3.1.4)
       rails-assets-bootstrap (>= 3.0)
@@ -763,7 +763,7 @@ DEPENDENCIES
   pundit
   rabl
   rails (~> 5.2.0)
-  rails-assets-bootstrap-sass-official (~> 3.3.7)!
+  rails-assets-bootstrap-sass-official (~> 3.4.0)!
   rails-assets-eonasdan-bootstrap-datetimepicker (~> 3.1.4)!
   rails-assets-footable (~> 2.0.3)!
   rails-assets-jquery-tokeninput (~> 1.7.0)!
