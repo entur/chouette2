@@ -194,5 +194,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-jquery-tokeninput', '~> 1.7.0'
 
   gem 'rails-assets-modernizr', '~> 2.0.6'
-  gem 'rails-assets-jquery-ui', '~> 1.11.4'
+  gem 'rails-assets-jquery-ui', '~> 1.12.0'
 end
