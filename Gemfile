@@ -187,7 +187,7 @@ source 'https://rails-assets.org' do
   # Use twitter bootstrap resources
   gem 'rails-assets-bootstrap-sass-official', '~> 3.3.7'
   gem 'rails-assets-tagmanager', '~> 3.0.0'
-  gem 'rails-assets-typeahead.js', '~> 0.10.5'
+  gem 'rails-assets-typeahead.js', '~> 0.11.0'
   gem 'rails-assets-typeahead.js-bootstrap3.less'
   gem 'rails-assets-respond'
   gem 'rails-assets-eonasdan-bootstrap-datetimepicker', '~> 3.1.4'
