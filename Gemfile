@@ -173,7 +173,7 @@ gem 'ievkit',  git: 'https://github.com/entur/ievkit.git', branch: 'master' #'~>
 gem 'ievkit_views', git: 'https://github.com/entur/ievkit_views.git', branch: 'master' #'~> 0.5.0'
 
 # I18n
-gem 'rails-i18n', '~> 5.1.3'
+gem 'rails-i18n', '~> 7.0.0'
 gem 'devise-i18n'
 gem 'chouette2-i18n', git: 'https://github.com/entur/chouette2-i18n.git', :branch => 'master'
 gem 'chouette-projects-i18n', git: 'https://github.com/entur/chouette-projects-i18n.git', :branch => 'master'
