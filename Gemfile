@@ -182,7 +182,7 @@ gem 'chouette-projects-i18n', git: 'https://github.com/entur/chouette-projects-i
 source 'https://rails-assets.org' do
   gem 'rails-assets-morrisjs', '~> 0.5.1'
   gem 'rails-assets-raphael', '~> 2.1.3'
-  gem 'rails-assets-footable', '~> 2.0.3'
+  gem 'rails-assets-footable', '~> 3.1.0'
 
   # Use twitter bootstrap resources
   gem 'rails-assets-bootstrap-sass-official', '~> 3.3.7'

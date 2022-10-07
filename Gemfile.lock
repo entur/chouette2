@@ -97,8 +97,7 @@ GEM
       rails-assets-bootstrap (>= 3.0)
       rails-assets-jquery (>= 1.8.3)
       rails-assets-moment (>= 2.8.0)
-    rails-assets-footable (2.0.3)
-      rails-assets-jquery (>= 1.4.4)
+    rails-assets-footable (3.1.6)
     rails-assets-jquery (3.6.1)
     rails-assets-jquery-tokeninput (1.7.0)
       rails-assets-jquery (>= 1.5)
@@ -759,7 +758,7 @@ DEPENDENCIES
   rails (~> 5.2.0)
   rails-assets-bootstrap-sass-official (~> 3.3.7)!
   rails-assets-eonasdan-bootstrap-datetimepicker (~> 3.1.4)!
-  rails-assets-footable (~> 2.0.3)!
+  rails-assets-footable (~> 3.1.0)!
   rails-assets-jquery-tokeninput (~> 1.7.0)!
   rails-assets-jquery-ui (~> 1.11.4)!
   rails-assets-modernizr (~> 2.0.6)!
