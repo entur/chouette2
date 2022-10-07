@@ -66,7 +66,7 @@ gem 'json-jwt', '~>1.11.0'
 
 # Map, Geolocalization
 gem 'map_layers', '0.0.5'
-gem 'rgeo', '~> 1.0.0'
+gem 'rgeo', '~> 1.1.0'
 gem 'georuby-ext', git: 'https://github.com/entur/georuby-ext.git', branch: 'master'
 gem 'georuby', '2.3.0' # Fix version for georuby-ext because api has changed
 gem 'ffi', '~> 1.15.5'
