@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'bundler', '~> 2.3.22'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 6.0.0'
 
 gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 
@@ -51,7 +51,7 @@ platforms :ruby do
   gem 'sqlite3'
 end
 
-gem 'activerecord-postgis-adapter', '~>  5.2.0'
+gem 'activerecord-postgis-adapter', '~>  6.0.0'
 gem 'polylines'
 
 # Authentication
@@ -116,7 +116,7 @@ gem 'rabl'
 
 gem 'delayed_job_active_record'
 gem 'devise-async', '~>  1.0.0'
-gem 'apartment', '~> 2.2.1'
+gem 'apartment', git: 'https://github.com/influitive/apartment.git', ref: 'f266f73e58835f94e4ec7c16f28443fe5eada1ac'
 
 gem 'newrelic_rpm'
 gem 'letter_opener'
@@ -139,7 +139,7 @@ group :development do
   #gem 'quiet_assets', '~> 1.1.0'
   gem 'simplecov', '~> 0.21.2'
   gem 'web-console', '~> 3.7.0'
-  platforms :ruby_20, :ruby_21, :ruby_22, :ruby_23 do
+  platforms :ruby_27 do
     #gem 'better_errors'
     gem 'binding_of_caller'
   end
@@ -155,7 +155,7 @@ group :test, :development do
   gem 'factory_bot_rails', '~> 6.2.0'
   gem 'rb-inotify', require: RUBY_PLATFORM.include?('linux') && 'rb-inotify'
   gem 'rb-fsevent', require: RUBY_PLATFORM.include?('darwin') && 'rb-fsevent'
-  gem 'transpec', git: 'https://github.com/yujinakayama/transpec.git', ref: 'ba82297b8760f989e268de1de35b914d1b03a037'
+  gem 'transpec', git: 'https://github.com/NielsKSchjoedt/transpec.git', ref: '633d4af678e0b463d5928628f9f68701bdbcb1fa'
   gem 'database_cleaner', '~>  2.0.1'
   gem 'shoulda-matchers', '~>  5.2.0'
   gem 'rspec_junit_formatter'
@@ -173,7 +173,7 @@ gem 'ievkit',  git: 'https://github.com/entur/ievkit.git', branch: 'master' #'~>
 gem 'ievkit_views', git: 'https://github.com/entur/ievkit_views.git', branch: 'master' #'~> 0.5.0'
 
 # I18n
-gem 'rails-i18n', '~> 5.1.3'
+gem 'rails-i18n', '~> 6.0.0'
 gem 'devise-i18n'
 gem 'chouette2-i18n', git: 'https://github.com/entur/chouette2-i18n.git', :branch => 'master'
 gem 'chouette-projects-i18n', git: 'https://github.com/entur/chouette-projects-i18n.git', :branch => 'master'
