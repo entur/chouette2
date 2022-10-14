@@ -64,6 +64,7 @@ describe Chouette::DestinationDisplay do
 
   describe "Destination Display Vias" do
     it "should be able to delete vias" do
+      pending "Deleting table without primary key not supported with Rails >= 6.0"
       expect(destination_display5.vias.length).to eq 2
       destination_display5.vias = []
       expect(destination_display5.vias.length).to eq 0
