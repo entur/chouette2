@@ -132,7 +132,7 @@ group :development do
   gem 'capistrano-ext'
   gem 'guard'
   gem 'guard-rspec'
-  gem 'rspec', '~> 3.11.0'
+  gem 'rspec', '~> 3.12.0'
   gem 'rails-erd'
   # MetaRequest is incompatible with rgeo-activerecord
   # gem 'meta_request'
