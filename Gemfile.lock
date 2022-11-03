@@ -548,9 +548,9 @@ GEM
       ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.4.3)
       loofah (~> 2.3)
-    rails-i18n (6.0.0)
+    rails-i18n (7.0.5)
       i18n (>= 0.7, < 2)
-      railties (>= 6.0.0, < 7)
+      railties (>= 6.0.0, < 8)
     railties (6.0.6)
       actionpack (= 6.0.6)
       activesupport (= 6.0.6)
@@ -701,7 +701,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.1)
+    zeitwerk (2.6.4)
 
 PLATFORMS
   ruby
@@ -793,7 +793,7 @@ DEPENDENCIES
   rails-assets-typeahead.js-bootstrap3.less!
   rails-controller-testing
   rails-erd
-  rails-i18n (~> 6.0.0)
+  rails-i18n (~> 7.0.0)
   ransack (~> 2.1)
   rb-fsevent
   rb-inotify
