@@ -440,7 +440,7 @@ GEM
     netrc (0.11.0)
     newrelic_rpm (8.10.1)
     nio4r (2.5.8)
-    nokogiri (1.13.9)
+    nokogiri (1.13.10)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     notiffany (0.1.3)
@@ -507,7 +507,7 @@ GEM
       activesupport (>= 3.0.0)
     rabl (0.16.0)
       activesupport (>= 2.3.14)
-    racc (1.6.0)
+    racc (1.6.1)
     rack (2.2.4)
     rack-oauth2 (1.21.3)
       activesupport
