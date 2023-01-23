@@ -116,7 +116,7 @@ gem 'rabl'
 
 gem 'delayed_job_active_record'
 gem 'devise-async', '~>  1.0.0'
-gem 'apartment', git: 'https://github.com/influitive/apartment.git', ref: 'f266f73e58835f94e4ec7c16f28443fe5eada1ac'
+gem 'ros-apartment', require: 'apartment'
 
 gem 'newrelic_rpm'
 gem 'letter_opener'

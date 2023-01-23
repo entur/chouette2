@@ -86,17 +86,6 @@ GIT
     language_engine (0.0.6)
       rails (>= 4.1.1)
 
-GIT
-  remote: https://github.com/influitive/apartment.git
-  revision: f266f73e58835f94e4ec7c16f28443fe5eada1ac
-  ref: f266f73e58835f94e4ec7c16f28443fe5eada1ac
-  specs:
-    apartment (2.2.1)
-      activerecord (>= 3.1.2, < 6.1)
-      parallel (>= 0.7.1)
-      public_suffix (>= 2)
-      rack (>= 1.3.6)
-
 GEM
   remote: https://rails-assets.org/
   specs:
@@ -425,7 +414,7 @@ GEM
       rake
     mini_mime (1.1.2)
     mini_portile2 (2.8.1)
-    minitest (5.16.3)
+    minitest (5.17.0)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.2.3)
@@ -502,7 +491,7 @@ GEM
     pry-rails (0.3.9)
       pry (>= 0.10.4)
     psych (3.3.4)
-    public_suffix (5.0.1)
+    public_suffix (4.0.7)
     pundit (2.2.0)
       activesupport (>= 3.0.0)
     rabl (0.16.1)
@@ -587,6 +576,11 @@ GEM
     roo (2.9.0)
       nokogiri (~> 1)
       rubyzip (>= 1.3.0, < 3.0.0)
+    ros-apartment (2.11.0)
+      activerecord (>= 5.0.0, < 7.1)
+      parallel (< 2.0)
+      public_suffix (>= 2.0.5, < 5.0)
+      rack (>= 1.3.6, < 3.0)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
       rspec-expectations (~> 3.12.0)
@@ -713,7 +707,6 @@ DEPENDENCIES
   acts-as-taggable-on (~> 8.1.0)
   acts_as_list (~> 1.0.4)
   acts_as_tree (~> 2.9.0)
-  apartment!
   baby_squeel (>= 1.4.4)
   binding_of_caller
   bootstrap-kaminari-views (~> 0.0.5)
@@ -800,6 +793,7 @@ DEPENDENCIES
   responders (~> 3.0)
   rgeo (~> 1.0.0)
   roo
+  ros-apartment
   rspec (~> 3.12.0)
   rspec-rails (~> 5.1.1)
   rspec_junit_formatter
