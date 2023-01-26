@@ -137,7 +137,7 @@ group :development do
   # MetaRequest is incompatible with rgeo-activerecord
   # gem 'meta_request'
   #gem 'quiet_assets', '~> 1.1.0'
-  gem 'simplecov', '~> 0.21.2'
+  gem 'simplecov', '~> 0.22.0'
   gem 'web-console', '~> 3.7.0'
   platforms :ruby_27 do
     #gem 'better_errors'
