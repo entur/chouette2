@@ -2,6 +2,7 @@
 
 [![Join the chat at https://gitter.im/afimb/chouette2](https://badges.gitter.im/afimb/chouette2.svg)](https://gitter.im/afimb/chouette2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+
 Chouette2 is an open source web project in Ruby/Rails for editing and viewing Public Transport data. 
 
 Chouette2 is designed as an [SaaS](http://en.wikipedia.org/wiki/Software_as_a_service) platform and can :
