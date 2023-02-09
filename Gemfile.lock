@@ -710,7 +710,7 @@ PLATFORMS
 DEPENDENCIES
   RedCloth
   SyslogLogger
-  activerecord-postgis-adapter (~> 6.0.0)
+  activerecord-postgis-adapter (>= 6.0.0)
   acts-as-taggable-on (~> 8.1.0)
   acts_as_list (~> 1.0.4)
   acts_as_tree (~> 2.9.0)
