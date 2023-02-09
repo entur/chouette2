@@ -61,7 +61,7 @@ gem 'devise_invitable'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
-gem 'omniauth_openid_connect', '~> 0.4.0'
+gem 'omniauth_openid_connect', '~> 0.6.0'
 gem 'json-jwt', '~>1.11.0'
 
 # Map, Geolocalization
