@@ -675,9 +675,8 @@ GEM
       coffee-rails
     tzinfo (1.2.11)
       thread_safe (~> 0.1)
-    uglifier (2.7.2)
-      execjs (>= 0.3.0)
-      json (>= 1.8.0)
+    uglifier (4.2.0)
+      execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
@@ -817,7 +816,7 @@ DEPENDENCIES
   therubyracer (~> 0.12)
   transpec!
   turbolinks (~> 2.5.3)
-  uglifier (~> 2.7.2)
+  uglifier (~> 4.2.0)
   web-console (~> 3.7.0)
 
 BUNDLED WITH
