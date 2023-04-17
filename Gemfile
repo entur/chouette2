@@ -149,7 +149,7 @@ group :test, :development do
   gem 'pry-rails'
   gem 'rspec-rails', '~> 6.0.0'
   gem 'fakeweb', git: 'https://github.com/chrisk/fakeweb.git', ref: '2b08c1ff2714ec13a12f3497d67fcefce95c2cbe'
-  gem 'capybara', '~> 3.28.0'
+  gem 'capybara', '~> 3.39.0'
   gem 'poltergeist'
   gem 'launchy'
   gem 'factory_bot_rails', '~> 6.2.0'
