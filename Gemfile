@@ -95,7 +95,7 @@ gem 'inherited_resources'
 gem 'google-analytics-rails', '~> 1.1.0'
 
 # Model
-gem 'ransack', '~> 2.1'
+gem 'ransack', '~> 4.0'
 
 #gem 'squeel'
 gem 'baby_squeel', '>= 1.4.4'
