@@ -1,4 +1,4 @@
-FROM ruby:3.0.6-slim-bullseye as base
+FROM ruby:3.1.4-slim-bullseye as base
 
 RUN apt-get update && apt-get -y upgrade && apt-get install -y nodejs libgeos-dev proj-bin libproj-dev sendmail dumb-init shared-mime-info sqlite3 postgresql-client wget
 

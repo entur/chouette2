@@ -89,7 +89,6 @@ GIT
 GEM
   remote: https://rails-assets.org/
   specs:
-    matrix (0.3.1)
     rails-assets-bootstrap (3.1.1)
       rails-assets-jquery (>= 1.9.0)
     rails-assets-bootstrap-sass-official (3.3.7)
@@ -399,7 +398,7 @@ GEM
       addressable (~> 2.8)
     letter_opener (1.8.1)
       launchy (>= 2.2, < 3)
-    libv8 (3.16.14.19)
+    libv8-node (16.10.0.0)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -414,6 +413,7 @@ GEM
       net-smtp
     map_layers (0.0.5)
     marcel (1.0.2)
+    matrix (0.3.1)
     method_source (1.0.0)
     migration_data (0.6.0)
     mime-types (3.4.1)
@@ -424,6 +424,8 @@ GEM
       rake
     mini_mime (1.1.2)
     mini_portile2 (2.8.1)
+    mini_racer (0.6.3)
+      libv8-node (~> 16.10.0.0)
     minitest (5.17.0)
     multi_json (1.15.0)
     multi_xml (0.6.0)
@@ -572,7 +574,6 @@ GEM
       ffi (~> 1.0)
     rdoc (6.3.3)
     redis (3.3.5)
-    ref (2.0.0)
     regexp_parser (2.8.0)
     responders (3.1.0)
       actionpack (>= 5.2)
@@ -670,9 +671,6 @@ GEM
       activesupport (>= 3)
       attr_required (>= 0.0.5)
       httpclient (>= 2.4)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
     thor (1.2.1)
     tilt (2.0.11)
     timeout (0.3.2)
@@ -770,6 +768,7 @@ DEPENDENCIES
   map_layers (= 0.0.5)
   migration_data
   mimemagic
+  mini_racer (~> 0.6.3)
   newrelic_rpm
   omniauth
   omniauth-facebook
@@ -818,7 +817,6 @@ DEPENDENCIES
   simplecov (~> 0.22.0)
   spring (~> 4.1.0)
   sqlite3
-  therubyracer (~> 0.12)
   transpec!
   turbolinks (~> 2.5.3)
   uglifier (~> 4.2.0)
