@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 202301091420900000) do
+ActiveRecord::Schema.define(version: 202312040928000000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "postgis"
 
-  create_table "access_links", id: :serial, force: :cascade do |t|
+  create_table "access_links", force: :cascade do |t|
     t.bigint "access_point_id"
     t.bigint "stop_area_id"
     t.string "objectid", null: false
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["objectid"], name: "access_links_objectid_key", unique: true
   end
 
-  create_table "access_points", id: :serial, force: :cascade do |t|
+  create_table "access_points", force: :cascade do |t|
     t.string "objectid"
     t.bigint "object_version"
     t.datetime "creation_time"
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["objectid"], name: "access_points_objectid_key", unique: true
   end
 
-  create_table "api_keys", id: :serial, force: :cascade do |t|
+  create_table "api_keys", force: :cascade do |t|
     t.bigint "referential_id"
     t.string "token"
     t.string "name"
@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.datetime "updated_at"
   end
 
-  create_table "blocks", id: :serial, force: :cascade do |t|
+  create_table "blocks", force: :cascade do |t|
     t.string "objectid", null: false
     t.bigint "object_version"
     t.datetime "creation_time"
@@ -104,7 +104,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["vehicle_journey_id"], name: "blocks_vehicle_journeys_vehicle_journey_id_idx"
   end
 
-  create_table "booking_arrangements", id: :serial, force: :cascade do |t|
+  create_table "booking_arrangements", force: :cascade do |t|
     t.string "booking_note"
     t.string "booking_access"
     t.string "book_when"
@@ -123,7 +123,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.string "buy_when"
   end
 
-  create_table "brandings", id: :serial, force: :cascade do |t|
+  create_table "brandings", force: :cascade do |t|
     t.string "objectid", null: false
     t.bigint "object_version"
     t.datetime "creation_time"
@@ -135,14 +135,14 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["objectid"], name: "brandings_objectid_key", unique: true
   end
 
-  create_table "codespaces", id: :serial, force: :cascade do |t|
+  create_table "codespaces", force: :cascade do |t|
     t.string "xmlns", null: false
     t.string "xmlns_url", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "companies", id: :serial, force: :cascade do |t|
+  create_table "companies", force: :cascade do |t|
     t.string "objectid", null: false
     t.bigint "object_version"
     t.datetime "creation_time"
@@ -168,7 +168,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["registration_number"], name: "companies_registration_number_key"
   end
 
-  create_table "connection_links", id: :serial, force: :cascade do |t|
+  create_table "connection_links", force: :cascade do |t|
     t.bigint "departure_id"
     t.bigint "arrival_id"
     t.string "objectid", null: false
@@ -190,7 +190,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["objectid"], name: "connection_links_objectid_key", unique: true
   end
 
-  create_table "contact_structures", id: :serial, force: :cascade do |t|
+  create_table "contact_structures", force: :cascade do |t|
     t.string "contact_person"
     t.string "email"
     t.string "phone"
@@ -206,7 +206,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["original_dsj_id", "derived_dsj_id"], name: "dated_service_journey_refs_original_dsj_id_derived_dsj_id_key", unique: true
   end
 
-  create_table "dated_service_journeys", id: :serial, force: :cascade do |t|
+  create_table "dated_service_journeys", force: :cascade do |t|
     t.string "objectid", null: false
     t.bigint "object_version"
     t.datetime "creation_time"
@@ -214,11 +214,10 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.date "operating_day", null: false
     t.integer "vehicle_journey_id", null: false
     t.string "service_alteration"
-    t.index ["objectid"], name: "dated_service_journeys_objectid_key", unique: true
     t.index ["vehicle_journey_id"], name: "dated_service_journeys_vehicle_journey_id_idx"
   end
 
-  create_table "dead_run_at_stops", id: :serial, force: :cascade do |t|
+  create_table "dead_run_at_stops", force: :cascade do |t|
     t.string "objectid", null: false
     t.bigint "object_version"
     t.datetime "creation_time"
@@ -233,7 +232,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["stop_point_id"], name: "index_dead_run_at_stops_on_stop_pointid"
   end
 
-  create_table "dead_runs", id: :serial, force: :cascade do |t|
+  create_table "dead_runs", force: :cascade do |t|
     t.bigint "journey_pattern_id"
     t.string "objectid", null: false
     t.bigint "object_version"
@@ -242,7 +241,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["objectid"], name: "dead_runs_objectid_key", unique: true
   end
 
-  create_table "delayed_jobs", id: :serial, force: :cascade do |t|
+  create_table "delayed_jobs", force: :cascade do |t|
     t.integer "priority", default: 0
     t.integer "attempts", default: 0
     t.text "handler"
@@ -260,13 +259,13 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
   create_table "destination_display_via", id: false, force: :cascade do |t|
     t.bigint "destination_display_id", null: false
     t.bigint "via_id", null: false
-    t.bigint "position"
+    t.bigint "position", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["destination_display_id"], name: "index_destination_display_id_on_destination_display_via"
   end
 
-  create_table "destination_displays", id: :serial, force: :cascade do |t|
+  create_table "destination_displays", force: :cascade do |t|
     t.string "name"
     t.string "side_text"
     t.string "front_text", null: false
@@ -276,7 +275,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.string "creator_id"
   end
 
-  create_table "exports", id: :serial, force: :cascade do |t|
+  create_table "exports", force: :cascade do |t|
     t.bigint "referential_id"
     t.string "status"
     t.string "type"
@@ -288,7 +287,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["referential_id"], name: "index_exports_on_referential_id"
   end
 
-  create_table "facilities", id: :serial, force: :cascade do |t|
+  create_table "facilities", force: :cascade do |t|
     t.bigint "stop_area_id"
     t.bigint "line_id"
     t.bigint "connection_link_id"
@@ -318,7 +317,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.integer "choice_code"
   end
 
-  create_table "flexible_service_properties", id: :serial, force: :cascade do |t|
+  create_table "flexible_service_properties", force: :cascade do |t|
     t.string "objectid", null: false
     t.bigint "object_version"
     t.datetime "creation_time"
@@ -330,7 +329,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["objectid"], name: "flexible_service_propertiess_objectid_key", unique: true
   end
 
-  create_table "footnote_alternative_texts", id: :serial, force: :cascade do |t|
+  create_table "footnote_alternative_texts", force: :cascade do |t|
     t.string "objectid", null: false
     t.integer "object_version"
     t.datetime "creation_time"
@@ -341,7 +340,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["objectid"], name: "footnote_alternative_texts_objectid_key", unique: true
   end
 
-  create_table "footnotes", id: :serial, force: :cascade do |t|
+  create_table "footnotes", force: :cascade do |t|
     t.string "code"
     t.string "label"
     t.datetime "creation_time"
@@ -386,7 +385,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["vehicle_journey_id"], name: "footnotes_vehicle_journeys_vehicle_journey_id_idx"
   end
 
-  create_table "group_of_lines", id: :serial, force: :cascade do |t|
+  create_table "group_of_lines", force: :cascade do |t|
     t.string "objectid", null: false
     t.bigint "object_version"
     t.datetime "creation_time"
@@ -402,7 +401,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.bigint "line_id"
   end
 
-  create_table "interchanges", id: :serial, force: :cascade do |t|
+  create_table "interchanges", force: :cascade do |t|
     t.string "objectid", null: false
     t.bigint "object_version"
     t.datetime "creation_time"
@@ -428,7 +427,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["to_vehicle_journey"], name: "interchanges_to_vehicle_journey_idx"
   end
 
-  create_table "journey_frequencies", id: :serial, force: :cascade do |t|
+  create_table "journey_frequencies", force: :cascade do |t|
     t.bigint "vehicle_journey_id"
     t.time "scheduled_headway_interval", null: false
     t.time "first_departure_time", null: false
@@ -441,7 +440,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["vehicle_journey_id"], name: "index_journey_frequencies_on_vehicle_journey_id"
   end
 
-  create_table "journey_pattern_sections", id: :serial, force: :cascade do |t|
+  create_table "journey_pattern_sections", force: :cascade do |t|
     t.bigint "journey_pattern_id", null: false
     t.bigint "route_section_id", null: false
     t.integer "rank", null: false
@@ -452,7 +451,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["route_section_id"], name: "index_journey_pattern_sections_on_route_section_id"
   end
 
-  create_table "journey_patterns", id: :serial, force: :cascade do |t|
+  create_table "journey_patterns", force: :cascade do |t|
     t.bigint "route_id"
     t.string "objectid", null: false
     t.bigint "object_version"
@@ -474,7 +473,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["journey_pattern_id"], name: "index_journey_pattern_id_on_journey_patterns_stop_points"
   end
 
-  create_table "lines", id: :serial, force: :cascade do |t|
+  create_table "lines", force: :cascade do |t|
     t.bigint "network_id"
     t.bigint "company_id"
     t.string "objectid", null: false
@@ -508,7 +507,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.string "value"
   end
 
-  create_table "networks", id: :serial, force: :cascade do |t|
+  create_table "networks", force: :cascade do |t|
     t.string "objectid", null: false
     t.bigint "object_version"
     t.datetime "creation_time"
@@ -526,14 +525,14 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["registration_number"], name: "networks_registration_number_key"
   end
 
-  create_table "organisations", id: :serial, force: :cascade do |t|
+  create_table "organisations", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string "data_format", default: "neptune"
   end
 
-  create_table "pt_links", id: :serial, force: :cascade do |t|
+  create_table "pt_links", force: :cascade do |t|
     t.bigint "start_of_link_id"
     t.bigint "end_of_link_id"
     t.bigint "route_id"
@@ -547,11 +546,11 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["objectid"], name: "pt_links_objectid_key", unique: true
   end
 
-  create_table "referential_last_update", id: :serial, force: :cascade do |t|
+  create_table "referential_last_update", force: :cascade do |t|
     t.datetime "last_update_timestamp"
   end
 
-  create_table "referentials", id: :serial, force: :cascade do |t|
+  create_table "referentials", force: :cascade do |t|
     t.string "name"
     t.string "slug"
     t.datetime "created_at"
@@ -568,7 +567,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["name", "organisation_id"], name: "index_referentials_on_name_and_organisation_id", unique: true
   end
 
-  create_table "route_points", id: :serial, force: :cascade do |t|
+  create_table "route_points", force: :cascade do |t|
     t.string "objectid", null: false
     t.bigint "object_version"
     t.datetime "creation_time"
@@ -579,7 +578,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["objectid"], name: "route_points_objectid_key", unique: true
   end
 
-  create_table "route_sections", id: :serial, force: :cascade do |t|
+  create_table "route_sections", force: :cascade do |t|
     t.geometry "input_geometry", limit: {:srid=>4326, :type=>"line_string"}
     t.geometry "processed_geometry", limit: {:srid=>4326, :type=>"line_string"}
     t.string "objectid", null: false
@@ -593,7 +592,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["objectid"], name: "route_sections_objectid_key", unique: true
   end
 
-  create_table "routes", id: :serial, force: :cascade do |t|
+  create_table "routes", force: :cascade do |t|
     t.bigint "line_id"
     t.string "objectid", null: false
     t.bigint "object_version"
@@ -609,7 +608,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["objectid"], name: "routes_objectid_key", unique: true
   end
 
-  create_table "routes_route_points", id: :serial, force: :cascade do |t|
+  create_table "routes_route_points", force: :cascade do |t|
     t.bigint "route_id", null: false
     t.bigint "route_point_id", null: false
     t.integer "position", null: false
@@ -623,7 +622,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["stop_area_objectid_key"], name: "index_routing_constraints_lines_on_stop_area_objectid_key"
   end
 
-  create_table "rule_parameter_sets", id: :serial, force: :cascade do |t|
+  create_table "rule_parameter_sets", force: :cascade do |t|
     t.text "parameters"
     t.string "name"
     t.datetime "created_at"
@@ -631,7 +630,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.bigint "organisation_id"
   end
 
-  create_table "scheduled_stop_points", id: :serial, force: :cascade do |t|
+  create_table "scheduled_stop_points", force: :cascade do |t|
     t.string "objectid", null: false
     t.string "stop_area_objectid_key"
     t.bigint "object_version"
@@ -643,7 +642,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["stop_area_objectid_key"], name: "scheduled_stop_points_stop_area_idx"
   end
 
-  create_table "stop_areas", id: :serial, force: :cascade do |t|
+  create_table "stop_areas", force: :cascade do |t|
     t.bigint "parent_id"
     t.string "objectid", null: false
     t.bigint "object_version"
@@ -685,7 +684,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.bigint "parent_id"
   end
 
-  create_table "stop_points", id: :serial, force: :cascade do |t|
+  create_table "stop_points", force: :cascade do |t|
     t.bigint "route_id"
     t.string "objectid", null: false
     t.bigint "object_version"
@@ -702,19 +701,19 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["scheduled_stop_point_id"], name: "stop_points_scheduled_stop_point_id_idx"
   end
 
-  create_table "taggings", id: :serial, force: :cascade do |t|
+  create_table "taggings", force: :cascade do |t|
     t.bigint "tag_id"
-    t.string "taggable_type"
     t.bigint "taggable_id"
-    t.string "tagger_type"
+    t.string "taggable_type"
     t.bigint "tagger_id"
+    t.string "tagger_type"
     t.string "context", limit: 128
     t.datetime "created_at"
     t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
     t.index ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context"
   end
 
-  create_table "tags", id: :serial, force: :cascade do |t|
+  create_table "tags", force: :cascade do |t|
     t.string "name"
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
@@ -736,7 +735,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["time_table_id"], name: "index_time_table_periods_on_time_table_id"
   end
 
-  create_table "time_tables", id: :serial, force: :cascade do |t|
+  create_table "time_tables", force: :cascade do |t|
     t.string "objectid", null: false
     t.bigint "object_version", default: 1
     t.datetime "creation_time"
@@ -768,7 +767,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["vehicle_journey_id"], name: "index_time_tables_vehicle_journeys_on_vehicle_journey_id"
   end
 
-  create_table "timebands", id: :serial, force: :cascade do |t|
+  create_table "timebands", force: :cascade do |t|
     t.string "objectid", null: false
     t.bigint "object_version"
     t.datetime "creation_time"
@@ -780,7 +779,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.datetime "updated_at"
   end
 
-  create_table "users", id: :serial, force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: ""
     t.string "reset_password_token"
@@ -818,7 +817,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "vehicle_journey_at_stops", id: :serial, force: :cascade do |t|
+  create_table "vehicle_journey_at_stops", force: :cascade do |t|
     t.bigint "vehicle_journey_id"
     t.bigint "stop_point_id"
     t.string "connecting_service_id"
@@ -838,7 +837,7 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
     t.index ["vehicle_journey_id"], name: "index_vehicle_journey_at_stops_on_vehicle_journey_id"
   end
 
-  create_table "vehicle_journeys", id: :serial, force: :cascade do |t|
+  create_table "vehicle_journeys", force: :cascade do |t|
     t.bigint "route_id"
     t.bigint "journey_pattern_id"
     t.bigint "company_id"
@@ -895,6 +894,8 @@ ActiveRecord::Schema.define(version: 202301091420900000) do
   add_foreign_key "dead_run_at_stops", "dead_runs", name: "dead_run_at_stops_dead_runs_id_fkey"
   add_foreign_key "dead_run_at_stops", "stop_points", name: "dead_run_at_stops_stop_point_id_fkey"
   add_foreign_key "dead_runs", "journey_patterns", name: "dead_runs_journey_patterns_id_fkey"
+  add_foreign_key "destination_display_via", "destination_displays", column: "via_id", name: "destination_display_via_via"
+  add_foreign_key "destination_display_via", "destination_displays", name: "destination_display_via_destination_display"
   add_foreign_key "flexible_service_properties", "booking_arrangements", name: "flexible_props_booking_arrangement_fkey"
   add_foreign_key "footnote_alternative_texts", "footnotes", name: "footnotes_footnote_alternative_texts_fkey"
   add_foreign_key "footnotes_journey_patterns", "footnotes", name: "footnotes_journey_patterns_footnotes_fkey", on_delete: :cascade
