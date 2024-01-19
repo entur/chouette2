@@ -1,21 +1,23 @@
 env: dev
-
 replicas: 2
-
-
 rollingUpdate:
   maxSurge: 1
   maxUnavailable: 1
 image:
-  identifier: ${artifact.metadata.image}
+  identifier: <+artifacts.primary.image>
   imagePullPolicy: Always
 resources:
   cpuLimit: 1500m
   memLimit: 3500Mi
   cpuRequest: 800m
   memRequest: 3000Mi
-
 service:
   http:
     externalPort: 80
     internalPort: 3000
+secrets:
+  ror-chouette2-secret: 
+    - chouette2_db_password
+    - chouette2_db_username
+    - devise_secret_key
+    - secret_key_base
