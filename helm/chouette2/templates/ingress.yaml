@@ -11,11 +11,8 @@ metadata:
   namespace: {{ .Release.Namespace }}
 spec:
   rules:
-  {{- if eq .Values.env "prod"}}
-  - host: rutedb.entur.org
-  {{ else }}
-  - host: rutedb.{{ .Release.Namespace }}.entur.org
-  {{- end}}
+  - host: rutedb.{{ .Values.ingress.domain }}
+
     http:
       paths:
         - pathType: ImplementationSpecific
