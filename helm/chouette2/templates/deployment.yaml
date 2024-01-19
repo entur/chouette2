@@ -21,11 +21,11 @@ spec:
       labels:
         {{- include "common.labels" . | indent 8 }}
     spec:
+      serviceAccountName: application
       containers:
         - command:
             - /cloud_sql_proxy
             - -instances={{ .Values.sql.instance }}
-            - -credential_file=/etc/chouette2-service-account/credentials.json
             - -term_timeout=30s
             - -log_debug_stdout
             - -verbose=false
@@ -36,41 +36,25 @@ spec:
             requests:
               cpu: 50m
               memory: 40Mi
+          securityContext:
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: [ "ALL" ]
+            seccompProfile:
+              type: RuntimeDefault
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
-          volumeMounts:
-            - mountPath: /etc/chouette2-service-account
-              name: chouette2-service-account
         - env:
             - name: TZ
               value: Europe/Oslo
             - name: RAILS_ENV
               value: production
-            - name: REDIS_HOST
-              valueFrom:
-                configMapKeyRef:
-                  name: chouette2-redis-configmap
-                  key: REDIS_HOST
-            - name: secret_key_base
-              valueFrom:
-                secretKeyRef:
-                  key: chouette2-secret-key-base
-                  name: ror-chouette2-secret
-            - name: devise_secret_key
-              valueFrom:
-                secretKeyRef:
-                  key: chouette2-devise-secret-key
-                  name: ror-chouette2-secret
-            - name: chouette2_db_username
-              valueFrom:
-                secretKeyRef:
-                  key: chouette2-db-username
-                  name: ror-chouette2-secret
-            - name: chouette2_db_password
-              valueFrom:
-                secretKeyRef:
-                  key: chouette2-db-password
-                  name: ror-chouette2-secret
+          envFrom:
+            - configMapRef:
+                name: chouette-redis-connection
+            - secretRef:
+                name: ror-chouette2-secret
           image: {{ .Values.image.identifier }}
           name: chouette2
           ports:
@@ -93,6 +77,13 @@ spec:
             requests:
               cpu: {{ .Values.resources.cpuRequest }}
               memory: {{ .Values.resources.memRequest }}
+          securityContext:
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: [ "ALL" ]
+            seccompProfile:
+              type: RuntimeDefault
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
           volumeMounts:
@@ -105,13 +96,12 @@ spec:
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
-      securityContext: {}
+      securityContext:
+        runAsGroup: 1000
+        runAsNonRoot: true
+        runAsUser: 1000
       terminationGracePeriodSeconds: 30
       volumes:
-        - name: chouette2-service-account
-          secret:
-            defaultMode: 420
-            secretName: ror-chouette2-sa-key
         - configMap:
             defaultMode: 420
             name: chouette2-config

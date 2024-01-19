@@ -2,7 +2,6 @@
   # Describe where terraform will store the state of infrastructure
   terraform {
     backend "gcs" {
-    bucket = "entur-system-tf-backend-ror"
-    prefix = "gcp/ror/chouette2"
+    bucket = "ent-gcs-tfa-chouette2"
     }
   }
