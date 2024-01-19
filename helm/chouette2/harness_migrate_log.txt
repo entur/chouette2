@@ -1,0 +1,24 @@
+Migrating null as null
+Migrating chouette2 as chouette2
+Migrated dev
+Migrated tst
+Migrated prd
+Migrating chouette2 as chouette2
+Migrated dev
+Migrating chouette2 as chouette2
+Migrating chouette2 as chouette2
+Created chouette2_db_password
+Created chouette2_db_username
+Created devise_secret_key
+Created secret_key_base
+Migrated dev
+Created chouette2_db_password
+Created chouette2_db_username
+Created devise_secret_key
+Created secret_key_base
+Migrated tst
+Created chouette2_db_password
+Created chouette2_db_username
+Created devise_secret_key
+Created secret_key_base
+Migrated prd
