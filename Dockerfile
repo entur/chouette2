@@ -1,4 +1,4 @@
-FROM ruby:3.1.4-slim-bookworm AS base
+FROM ruby:3.3.0-slim-bookworm AS base
 
 RUN apt-get update \
     && apt-get -y upgrade \
