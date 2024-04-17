@@ -786,7 +786,7 @@ DEPENDENCIES
   psych (< 4.0.0)
   pundit
   rabl
-  rails (~> 6.1.0)
+  rails (= 6.1.7.7)
   rails-assets-bootstrap-sass-official (~> 3.3.7)!
   rails-assets-eonasdan-bootstrap-datetimepicker (~> 3.1.4)!
   rails-assets-footable (~> 2.0.3)!
