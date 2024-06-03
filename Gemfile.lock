@@ -587,7 +587,7 @@ GEM
       netrc (~> 0.8)
     rexml (3.2.8)
       strscan (>= 3.0.9)
-    rgeo (1.1.2)
+    rgeo (3.0.1)
     rgeo-activerecord (7.0.1)
       activerecord (>= 5.0)
       rgeo (>= 1.0.0)
@@ -808,7 +808,7 @@ DEPENDENCIES
   rb-fsevent
   rb-inotify
   responders (~> 3.0)
-  rgeo (~> 1.1.0)
+  rgeo (~> 3.0.0)
   roo
   ros-apartment
   rspec (~> 3.12.0)
