@@ -62,7 +62,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth_openid_connect', '~> 0.6.0'
-gem 'json-jwt', '~>1.11.0'
+gem 'json-jwt', '~>1.15.3'
 
 # Map, Geolocalization
 gem 'map_layers', '0.0.5'
