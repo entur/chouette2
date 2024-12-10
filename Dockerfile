@@ -1,10 +1,10 @@
-FROM ruby:3.1.6-slim-bullseye as base
+FROM ruby:3.2.6-slim-bookworm AS base
 
 RUN apt-get update && apt-get -y upgrade && apt-get install -y nodejs libgeos-dev proj-bin libproj-dev sendmail dumb-init shared-mime-info sqlite3 postgresql-client wget
 
-RUN gem update --system 3.3.8
+RUN gem update --system 3.4.19
 
-RUN gem install bundler -v 2.3.22
+RUN gem install bundler -v 2.4.19
 
 # Line below is to try to solve nokogiri build failure
 RUN bundle  config build.nokogiri --use-system-libraries
