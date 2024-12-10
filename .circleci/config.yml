@@ -40,11 +40,11 @@ aliases:
 jobs:
   build:
     docker:
-      - image: ruby:3.1.6-bullseye
+      - image: ruby:3.2.6-bullseye
         auth:
           username: $DOCKERHUB_LOGIN
           password: $DOCKERHUB_PASSWORD
-      - image: postgis/postgis:13-3.1
+      - image: postgis/postgis:13-3.5
         auth:
           username: $DOCKERHUB_LOGIN
           password: $DOCKERHUB_PASSWORD
@@ -68,8 +68,8 @@ jobs:
       - run:
           name: Install Bundler
           command: |
-            gem update --system 3.3.8
-            gem install bundler -v 2.3.22
+            gem update --system 3.4.19
+            gem install bundler -v 2.4.19
       - run:
           name: Copy default database config file
           command: cp config/database.example.yml config/database.yml
