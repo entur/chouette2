@@ -400,7 +400,7 @@ GEM
       addressable (~> 2.8)
     letter_opener (1.8.1)
       launchy (>= 2.2, < 3)
-    libv8-node (16.19.0.1)
+    libv8-node (18.19.0.0)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -426,8 +426,8 @@ GEM
       rake
     mini_mime (1.1.5)
     mini_portile2 (2.8.8)
-    mini_racer (0.6.4)
-      libv8-node (~> 16.19.0.0)
+    mini_racer (0.16.0)
+      libv8-node (~> 18.19.0.0)
     minitest (5.24.1)
     multi_json (1.15.0)
     multi_xml (0.6.0)
@@ -775,7 +775,7 @@ DEPENDENCIES
   map_layers (= 0.0.5)
   migration_data
   mimemagic
-  mini_racer (~> 0.6.3)
+  mini_racer (~> 0.16.0)
   newrelic_rpm
   omniauth
   omniauth-facebook
