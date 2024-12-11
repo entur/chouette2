@@ -41,7 +41,7 @@ gem 'spring', '4.1.3', group: :development
 
 # API Rest
 gem 'sawyer', '0.9.2'
-gem 'faraday_middleware', '1.2.0'
+gem 'faraday_middleware', '1.2.1'
 
 gem 'figaro', '1.2.0'
 
