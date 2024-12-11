@@ -46,7 +46,7 @@ gem 'faraday_middleware', '1.2.0'
 gem 'figaro', '1.2.0'
 
 platforms :ruby do
-  gem 'mini_racer', '0.6.4'
+  gem 'mini_racer', '0.16.0'
   gem 'pg', '1.5.9'
   gem 'sqlite3'
 end
