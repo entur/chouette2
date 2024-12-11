@@ -22,7 +22,7 @@ gem 'jbuilder', '2.11.5'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '2.6.1', group: :doc
 # psych 4 is incompatible with Ruby < 3.1
-gem 'psych', '3.3.4', group: :doc
+gem 'psych', '5.2.1', group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring', '4.1.3', group: :development
