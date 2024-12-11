@@ -1,0 +1,79 @@
+name: Build and push
+on:
+  push:
+    branches:
+      - rutebanken_develop
+  pull_request:
+    branches:
+      - rutebanken_develop
+env:
+  PG_HOST: postgres
+  PG_PORT: 5432
+  JFROG_USER: ${{ secrets.ARTIFACTORY_AUTH_USER }}
+  JFROG_PASS: ${{ secrets.ARTIFACTORY_AUTH_TOKEN }}
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    container: ruby:3.2.6-bullseye
+    services:
+        postgres:
+            image: postgis/postgis:13-3.5
+            env:
+             TZ: Europe/Oslo
+             POSTGRES_DB: chouette_test
+             POSTGRES_USER: chouette
+             POSTGRES_PASSWORD: chouette
+            options: >-
+              --health-cmd pg_isready 
+              --health-interval 10s 
+              --health-timeout 5s 
+              --health-retries 5
+    steps:
+        - uses: actions/checkout@v4
+          with:
+            fetch-depth: 0
+
+        - name: Copy test config file before running tests
+          run: |
+              cp .github/application.yml config/application.yml
+        - name: apt update
+          run: apt-get update
+        - name: Install apt-dependencies
+          run: apt-get install -y libpq-dev libsqlite3-dev libxml2 libxml2-dev libxslt-dev graphviz libproj-dev libgeos-dev libffi-dev libsparsehash-dev curl nodejs
+        - name: Install Bundler
+          run: |
+              gem update --system 3.4.19
+              gem install bundler -v 2.4.19
+        - name: Copy default database config file
+          run: cp .github/database.yml config/database.yml
+        - name: Create locale folder
+          run: mkdir -p locales
+        - name: Print some info and versions
+          run: |
+              set -o xtrace
+              ruby -v
+              gem -v
+              gem list bundler
+              bundle -v
+        - name: Bundle install
+          run: |
+              set -o xtrace
+              bundle config build.nokogiri --use-system-libraries --with-xml2-include=/usr/include/libxml2
+              bundle install --deployment
+        - name: Rake create and migrate
+          run: |
+              export RAILS_ENV=test
+              bundle exec rake db:create
+              bundle exec rake db:migrate
+        - name: Rake spec
+          run: |
+              export RAILS_ENV=test
+              bundle exec rake db:reset
+              bundle exec rake spec
+  docker-build:
+          if: github.repository_owner == 'entur' && github.event_name == 'push' && github.ref == 'refs/heads/rutebanken_develop'
+          needs: [ build ]
+          uses: entur/gha-docker/.github/workflows/build.yml@v1
+  docker-push:
+          needs: [ docker-build ]
+          uses: entur/gha-docker/.github/workflows/push.yml@v1
