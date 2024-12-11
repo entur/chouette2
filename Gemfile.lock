@@ -587,7 +587,7 @@ GEM
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     rexml (3.3.9)
-    rgeo (1.1.2)
+    rgeo (3.0.1)
     rgeo-activerecord (7.0.1)
       activerecord (>= 5.0)
       rgeo (>= 1.0.0)
@@ -807,7 +807,7 @@ DEPENDENCIES
   rb-fsevent
   rb-inotify
   responders (= 3.1.1)
-  rgeo (= 1.1.2)
+  rgeo (= 3.0.1)
   roo
   ros-apartment
   rspec (= 3.12.0)
