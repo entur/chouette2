@@ -718,114 +718,114 @@ PLATFORMS
 DEPENDENCIES
   RedCloth
   SyslogLogger
-  activerecord-postgis-adapter (>= 6.0.0)
-  acts-as-taggable-on (~> 8.1.0)
-  acts_as_list (~> 1.0.4)
-  acts_as_tree (~> 2.9.0)
-  baby_squeel (>= 1.4.4)
+  activerecord-postgis-adapter (= 7.1.1)
+  acts-as-taggable-on (= 8.1.0)
+  acts_as_list (= 1.0.4)
+  acts_as_tree (= 2.9.1)
+  baby_squeel (= 2.0.0)
   binding_of_caller
-  bootstrap-kaminari-views (~> 0.0.5)
+  bootstrap-kaminari-views (= 0.0.5)
   breadcrumbs_on_rails
-  bundler (~> 2.4.19)
+  bundler (= 2.4.22)
   calendar_helper (= 0.2.6)
-  capistrano (~> 3.17.0)
+  capistrano (= 3.17.3)
   capistrano-ext
-  capybara (~> 3.39.0)
+  capybara (= 3.39.2)
   chouette-projects-i18n!
   chouette2-i18n!
   cocoon
-  coffee-rails (~> 5.0.0)
+  coffee-rails (= 5.0.0)
   daemons
-  database_cleaner (~> 2.0.1)
-  deep_cloneable (~> 3.2.0)
+  database_cleaner (= 2.0.2)
+  deep_cloneable (= 3.2.0)
   delayed_job_active_record
-  devise (~> 4.8.1)
-  devise-async (~> 1.0.0)
+  devise (= 4.8.1)
+  devise-async (= 1.0.0)
   devise-encryptable
   devise-i18n
   devise_invitable
-  enumerize (~> 2.5.0)
-  factory_bot_rails (~> 6.2.0)
+  enumerize (= 2.5.0)
+  factory_bot_rails (= 6.2.0)
   fakeweb!
-  faraday_middleware (~> 1.2.0)
-  ffi (~> 1.15.5)
+  faraday_middleware (= 1.2.0)
+  ffi (= 1.15.5)
   ffi-proj4!
-  figaro (~> 1.2.0)
-  font-awesome-sass (~> 4.2.0)
+  figaro (= 1.2.0)
+  font-awesome-sass (= 4.2.2)
   formtastic (= 4.0.0)
   georuby (= 2.3.0)
   georuby-ext!
-  google-analytics-rails (~> 1.1.0)
+  google-analytics-rails (= 1.1.1)
   guard
   guard-rspec
   ievkit!
   ievkit_views!
   inherited_resources
-  jbuilder (~> 2.0)
-  jquery-rails (~> 4.5.0)
+  jbuilder (= 2.11.5)
+  jquery-rails (= 4.5.1)
   json
-  json-jwt (~> 1.15.3)
-  kaminari (~> 1.2.2)
-  kaminari-i18n (~> 0.5.0)
+  json-jwt (= 1.15.3.1)
+  kaminari (= 1.2.2)
+  kaminari-i18n (= 0.5.0)
   language_engine!
   launchy
   letter_opener
   map_layers (= 0.0.5)
   migration_data
   mimemagic
-  mini_racer (~> 0.6.3)
+  mini_racer (= 0.6.4)
   newrelic_rpm
   omniauth
   omniauth-facebook
   omniauth-google-oauth2
   omniauth_openid_connect (~> 0.6.0)
-  passenger (>= 5.0.25)
-  pg (~> 1.5.0)
+  passenger (= 6.0.22)
+  pg (= 1.5.9)
   poltergeist
   polylines
   pry-rails
-  psych (< 4.0.0)
+  psych (= 3.3.4)
   pundit
   rabl
   rails (~> 6.1.0)
-  rails-assets-bootstrap-sass-official (~> 3.3.7)!
-  rails-assets-eonasdan-bootstrap-datetimepicker (~> 3.1.4)!
-  rails-assets-footable (~> 2.0.3)!
-  rails-assets-jquery-tokeninput (~> 1.7.0)!
-  rails-assets-jquery-ui (~> 1.11.4)!
-  rails-assets-modernizr (~> 2.0.6)!
-  rails-assets-morrisjs (~> 0.5.1)!
-  rails-assets-raphael (~> 2.1.3)!
+  rails-assets-bootstrap-sass-official (= 3.3.7)!
+  rails-assets-eonasdan-bootstrap-datetimepicker (= 3.1.4)!
+  rails-assets-footable (= 2.0.3)!
+  rails-assets-jquery-tokeninput (= 1.7.0)!
+  rails-assets-jquery-ui (= 1.11.4)!
+  rails-assets-modernizr (= 2.0.6)!
+  rails-assets-morrisjs (= 0.5.1)!
+  rails-assets-raphael (= 2.1.4)!
   rails-assets-respond!
-  rails-assets-tagmanager (~> 3.0.0)!
-  rails-assets-typeahead.js (~> 0.10.5)!
+  rails-assets-tagmanager (= 3.0.2)!
+  rails-assets-typeahead.js (= 0.10.5)!
   rails-assets-typeahead.js-bootstrap3.less!
   rails-controller-testing
   rails-erd
-  rails-i18n (~> 6.0.0)
-  ransack (~> 2.1)
+  rails-i18n (= 6.0.0)
+  ransack (= 2.6.0)
   rb-fsevent
   rb-inotify
-  responders (~> 3.0)
-  rgeo (~> 1.1.0)
+  responders (= 3.1.1)
+  rgeo (= 1.1.2)
   roo
   ros-apartment
-  rspec (~> 3.12.0)
-  rspec-rails (~> 6.0.0)
+  rspec (= 3.12.0)
+  rspec-rails (= 6.0.4)
   rspec_junit_formatter
-  rubyzip (~> 2.3.0)
-  sass-rails (~> 5.0)
-  sawyer (~> 0.9.0)
-  sdoc (~> 2.6.0)
-  shoulda-matchers (~> 5.3.0)
-  simple_form (~> 5.2.0)
-  simplecov (~> 0.22.0)
-  spring (~> 4.1.0)
+  rubyzip (= 2.3.2)
+  sass-rails (= 5.1.0)
+  sawyer (= 0.9.2)
+  sdoc (= 2.6.1)
+  shoulda-matchers (= 5.3.0)
+  simple_form (= 5.2.0)
+  simplecov (= 0.22.0)
+  spring (= 4.1.3)
   sqlite3
   transpec!
-  turbolinks (~> 2.5.3)
-  uglifier (~> 4.2.0)
-  web-console (~> 3.7.0)
+  turbolinks (= 2.5.4)
+  uglifier (= 4.2.0)
+  web-console (= 3.7.0)
 
 BUNDLED WITH
-   2.4.19
+   2.4.22
