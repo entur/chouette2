@@ -150,7 +150,7 @@ group :test, :development do
   gem 'capybara', '3.39.2'
   gem 'poltergeist'
   gem 'launchy'
-  gem 'factory_bot_rails', '6.2.0'
+  gem 'factory_bot_rails', '6.4.4'
   gem 'rb-inotify', require: RUBY_PLATFORM.include?('linux') && 'rb-inotify'
   gem 'rb-fsevent', require: RUBY_PLATFORM.include?('darwin') && 'rb-fsevent'
   gem 'transpec', git: 'https://github.com/NielsKSchjoedt/transpec.git', ref: '633d4af678e0b463d5928628f9f68701bdbcb1fa'
