@@ -43,7 +43,7 @@ jobs:
         - name: Install Bundler
           run: |
               gem update --system 3.4.19
-              gem install bundler -v 2.4.19
+              gem install bundler -v 2.4.22
         - name: Copy default database config file
           run: cp .github/database.yml config/database.yml
         - name: Create locale folder
@@ -59,7 +59,8 @@ jobs:
           run: |
               set -o xtrace
               bundle config build.nokogiri --use-system-libraries --with-xml2-include=/usr/include/libxml2
-              bundle install --deployment
+              bundle config set --local deployment 'true'
+              bundle install
         - name: Rake create and migrate
           run: |
               export RAILS_ENV=test
