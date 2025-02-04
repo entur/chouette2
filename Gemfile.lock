@@ -685,7 +685,7 @@ GEM
       coffee-rails
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    uglifier (4.2.0)
+    uglifier (4.2.1)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
@@ -827,7 +827,7 @@ DEPENDENCIES
   sqlite3
   transpec!
   turbolinks (= 2.5.4)
-  uglifier (= 4.2.0)
+  uglifier (= 4.2.1)
   web-console (= 3.7.0)
 
 BUNDLED WITH
