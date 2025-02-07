@@ -154,7 +154,7 @@ group :test, :development do
   gem 'rb-inotify', require: RUBY_PLATFORM.include?('linux') && 'rb-inotify'
   gem 'rb-fsevent', require: RUBY_PLATFORM.include?('darwin') && 'rb-fsevent'
   gem 'transpec', git: 'https://github.com/NielsKSchjoedt/transpec.git', ref: '633d4af678e0b463d5928628f9f68701bdbcb1fa'
-  gem 'database_cleaner', '2.0.2'
+  gem 'database_cleaner', '2.1.0'
   gem 'shoulda-matchers', '5.3.0'
   gem 'rspec_junit_formatter'
   gem 'rails-controller-testing'
