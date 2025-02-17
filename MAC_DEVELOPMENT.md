@@ -1,14 +1,14 @@
 Notes on developing on a Mac
 ------------
 
-* Install a ruby version manager (e.g. rvm or chruby).
-* Install and switch to ruby v2.7.8
+* Install a ruby version manager (e.g. rvm, rbenv or chruby).
+* Install and switch to ruby v3.2.6
 
 Run the following commands:
 
 ```sh
-gem update --system 3.3.8
-gem install bundler -v 2.3.22
+gem update --system 3.4.19
+gem install bundler -v 2.4.19
 ```
 
 Install some prerequisites:
@@ -112,10 +112,12 @@ default: &default
   postgis_schema: 'shared_extensions'
 
 development:
+  <% if RUBY_PLATFORM =~ /darwin/ %>gssencmode: disable<% end %>
   <<: *default
   database: chouette
 
 test:
+  <% if RUBY_PLATFORM =~ /darwin/ %>gssencmode: disable<% end %>
   <<: *default
   database: chouette-test
 ```
