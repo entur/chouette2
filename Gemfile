@@ -182,7 +182,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-footable', '2.0.3'
 
   # Use twitter bootstrap resources
-  gem 'rails-assets-bootstrap-sass-official', '3.3.7'
+  gem 'rails-assets-bootstrap-sass-official', '3.4.3'
   gem 'rails-assets-tagmanager', '3.0.2'
   gem 'rails-assets-typeahead.js', '0.10.5'
   gem 'rails-assets-typeahead.js-bootstrap3.less'
