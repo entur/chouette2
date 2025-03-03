@@ -7,7 +7,7 @@ gem 'rails', '~> 6.1.0'
 gem "passenger", "6.0.22", require: "phusion_passenger/rack_handler"
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '5.1.0'
+gem 'sass-rails', '6.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '4.2.1'
 # Use CoffeeScript for .js.coffee assets and views
