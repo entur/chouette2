@@ -47,10 +47,10 @@ GIT
 
 GIT
   remote: https://github.com/entur/ievkit.git
-  revision: df7d7d0650ee7a4a0a7d5a9ae0ba7272c470df02
+  revision: 51af8b34ca68a28bb91d62552fb63637514365e6
   branch: master
   specs:
-    ievkit (0.6.0)
+    ievkit (0.7.0)
       faraday_middleware (~> 1.2.0)
       figaro (~> 1.2.0)
       redis (~> 3.2)
@@ -58,13 +58,13 @@ GIT
 
 GIT
   remote: https://github.com/entur/ievkit_views.git
-  revision: 15d0f0aba460890a0858c76a698bb00a6c8278a2
+  revision: bfdd6c56f61900166e65f3711c6dd442c4a9437e
   branch: master
   specs:
-    ievkit_views (0.5.0)
+    ievkit_views (0.6.0)
       kaminari (~> 1.2.2)
       kaminari-i18n (~> 0.5.0)
-      rails (>= 5.2.0, < 7)
+      rails (>= 5.2.0, < 8)
 
 GIT
   remote: https://github.com/entur/language_engine
@@ -268,8 +268,7 @@ GEM
       devise (>= 4.6)
     diff-lcs (1.6.0)
     docile (1.4.1)
-    domain_name (0.5.20190701)
-      unf (>= 0.0.5, < 1.0.0)
+    domain_name (0.6.20240107)
     dr-ffi-proj4 (0.0.3)
       ffi (>= 1.0.0)
     enumerize (2.5.0)
@@ -297,8 +296,8 @@ GEM
     faraday-em_synchrony (1.0.0)
     faraday-excon (1.1.0)
     faraday-httpclient (1.0.1)
-    faraday-multipart (1.0.4)
-      multipart-post (~> 2)
+    faraday-multipart (1.1.0)
+      multipart-post (~> 2.0)
     faraday-net_http (1.0.2)
     faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
@@ -388,6 +387,7 @@ GEM
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.6.6)
     loofah (2.24.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -402,9 +402,10 @@ GEM
     matrix (0.4.2)
     method_source (1.1.0)
     migration_data (0.6.0)
-    mime-types (3.4.1)
+    mime-types (3.6.0)
+      logger
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2022.0105)
+    mime-types-data (3.2025.0220)
     mimemagic (0.4.3)
       nokogiri (~> 1)
       rake
@@ -415,7 +416,7 @@ GEM
     minitest (5.25.4)
     multi_json (1.15.0)
     multi_xml (0.6.0)
-    multipart-post (2.3.0)
+    multipart-post (2.4.1)
     mutex_m (0.2.0)
     nenv (0.3.0)
     net-imap (0.5.6)
@@ -498,7 +499,7 @@ GEM
     rabl (0.16.1)
       activesupport (>= 2.3.14)
     racc (1.8.1)
-    rack (2.2.11)
+    rack (2.2.12)
     rack-oauth2 (1.21.3)
       activesupport
       attr_required
@@ -670,9 +671,6 @@ GEM
       concurrent-ruby (~> 1.0)
     uglifier (4.2.1)
       execjs (>= 0.3.0, < 3)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.9.1)
     validate_email (0.1.6)
       activemodel (>= 3.0)
       mail (>= 2.2.5)
