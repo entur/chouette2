@@ -4,7 +4,8 @@ gem 'bundler', '2.4.22'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.0'
 
-gem "passenger", "6.0.22", require: "phusion_passenger/rack_handler"
+# TODO temporary fix waiting for the release of 6.1.0 final
+gem "passenger",  git: 'https://github.com/phusion/passenger.git', ref: '957ed9e6a263a2b74a53ae8c4d1d45c46779753e', require: "phusion_passenger/rack_handler"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '6.0.0'
