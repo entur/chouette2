@@ -2,7 +2,7 @@
   "extends": [
     "github>entur/ror-renovate-config"
   ],
-  "baseBranches": [
+  "baseBranchPatterns": [
     "rutebanken_develop"
   ],
   "enabledManagers": [
