@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'bundler', '2.4.22'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.0'
+gem 'rails', '6.1.7.10'
 
 gem "passenger", "6.0.22", require: "phusion_passenger/rack_handler"
 
