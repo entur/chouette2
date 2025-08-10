@@ -317,7 +317,7 @@ GEM
       actionpack (>= 5.2.0)
     geokit (1.6.7)
       multi_json (>= 1.3.2)
-    georuby (2.3.0)
+    georuby (2.5.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     google-analytics-rails (1.1.1)
@@ -737,7 +737,7 @@ DEPENDENCIES
   figaro (= 1.2.0)
   font-awesome-sass (= 4.7.0)
   formtastic (= 4.0.0)
-  georuby (= 2.3.0)
+  georuby (= 2.5.2)
   georuby-ext!
   google-analytics-rails (= 1.1.1)
   guard
