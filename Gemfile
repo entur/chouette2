@@ -107,7 +107,7 @@ gem 'kaminari-i18n', '0.5.0'
 gem 'enumerize', '2.5.0'
 #gem 'foreigner', '~> 1.7.4'
 gem 'deep_cloneable', '3.2.1'
-gem 'acts-as-taggable-on', '8.1.0'
+gem 'acts-as-taggable-on', '12.0.0'
 
 gem 'acts_as_list', '1.0.4'
 gem 'acts_as_tree', '2.9.1', require: 'acts_as_tree'
