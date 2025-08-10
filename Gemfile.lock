@@ -305,7 +305,7 @@ GEM
     faraday-retry (1.0.3)
     faraday_middleware (1.2.1)
       faraday (~> 1.0)
-    ffi (1.15.5)
+    ffi (1.17.2)
     ffi-geos (2.4.0)
       ffi (>= 1.0.0)
     figaro (1.2.0)
@@ -732,7 +732,7 @@ DEPENDENCIES
   factory_bot_rails (= 6.4.4)
   fakeweb!
   faraday_middleware (= 1.2.1)
-  ffi (= 1.15.5)
+  ffi (= 1.17.2)
   ffi-proj4!
   figaro (= 1.2.0)
   font-awesome-sass (= 4.7.0)
