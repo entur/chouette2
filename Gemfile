@@ -18,7 +18,7 @@ gem 'jquery-rails', '4.5.1' # Update to v4 for Rails 4.2
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks', '2.5.4'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '2.11.5'
+gem 'jbuilder', '2.14.1'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '2.6.1', group: :doc
 # psych 4 is incompatible with Ruby < 3.1
