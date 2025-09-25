@@ -274,7 +274,7 @@ GEM
     enumerize (2.5.0)
       activesupport (>= 3.2)
     erubi (1.13.1)
-    execjs (2.8.1)
+    execjs (2.10.0)
     factory_bot (6.5.1)
       activesupport (>= 6.1.0)
     factory_bot_rails (6.4.4)
@@ -388,7 +388,7 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.6.6)
-    loofah (2.24.0)
+    loofah (2.24.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     lumberjack (1.2.10)
@@ -413,7 +413,7 @@ GEM
     mini_portile2 (2.8.9)
     mini_racer (0.6.4)
       libv8-node (~> 16.19.0.0)
-    minitest (5.25.4)
+    minitest (5.25.5)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.4.1)
@@ -434,7 +434,7 @@ GEM
     netrc (0.11.0)
     newrelic_rpm (8.16.0)
     nio4r (2.7.4)
-    nokogiri (1.18.9)
+    nokogiri (1.18.10)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     notiffany (0.1.3)
@@ -499,7 +499,7 @@ GEM
     rabl (0.16.1)
       activesupport (>= 2.3.14)
     racc (1.8.1)
-    rack (2.2.17)
+    rack (2.2.18)
     rack-oauth2 (1.21.3)
       activesupport
       attr_required
@@ -529,7 +529,7 @@ GEM
       actionpack (>= 5.0.1.rc1)
       actionview (>= 5.0.1.rc1)
       activesupport (>= 5.0.1.rc1)
-    rails-dom-testing (2.2.0)
+    rails-dom-testing (2.3.0)
       activesupport (>= 5.0.0)
       minitest
       nokogiri (>= 1.6)
@@ -665,8 +665,9 @@ GEM
     thor (1.4.0)
     tilt (2.6.0)
     timeout (0.4.3)
-    turbolinks (2.5.4)
-      coffee-rails
+    turbolinks (5.2.1)
+      turbolinks-source (~> 5.2)
+    turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uglifier (4.2.1)
@@ -694,7 +695,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.7.2)
+    zeitwerk (2.7.3)
 
 PLATFORMS
   ruby
@@ -806,7 +807,7 @@ DEPENDENCIES
   simplecov (= 0.22.0)
   spring (= 4.1.3)
   sqlite3
-  turbolinks (= 2.5.4)
+  turbolinks (= 5.2.1)
   uglifier (= 4.2.1)
   web-console (= 3.7.0)
 
