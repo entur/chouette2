@@ -16,7 +16,7 @@ gem 'coffee-rails', '5.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '4.5.1' # Update to v4 for Rails 4.2
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', '2.5.4'
+gem 'turbolinks', '5.2.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '2.11.5'
 # bundle exec rake doc:rails generates the API under doc/api.
